@@ -6,9 +6,11 @@ Page({
    */
   data: {
     // 存放轮播图的数据
-    swiperData:[],
+    swiperData: [],
     // 存放导航栏数据
-    navData:[]
+    navData: [],
+    // 存放层楼数据
+    levelData: []
   },
 
   /**
@@ -16,22 +18,33 @@ Page({
    */
   onLoad: function (options) {
     // 页面加载完毕后获取轮播图数据放到swiperData中
-    let _this=this
+    let _this = this
     wx.request({
-      url:'https://api.zbztb.cn/api/public/v1/home/swiperdata',
-      success(res){
+      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+      success(res) {
         _this.setData({
-          swiperData:res.data.message
+          swiperData: res.data.message
         })
       }
     })
     // 页面加载完毕后获取导航图数据放到navData中
     wx.request({
-      url:'https://api.zbztb.cn/api/public/v1/home/catitems',
-      success(res){
+      url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
+      success(res) {
         _this.setData({
-          navData:res.data.message
+          navData: res.data.message
         })
+      }
+    })
+    // 页面加载完毕后获取层楼数据放到levelData中
+    wx.request({
+      url: "https://api.zbztb.cn/api/public/v1/home/floordata",
+      success(res) {
+        _this.setData({
+          levelData: res.data.message
+        })
+        console.log(_this.data);
+        
       }
     })
   },

@@ -1,10 +1,39 @@
-.index_swiper{
+.index_swiper {
     height: 340rpx;
 }
-.index_nav{
+
+.index_nav {
     display: flex;
 }
-.index_nav navigator{
-    flex:1;
+
+.index_nav navigator {
+    flex: 1;
     padding: 20rpx;
+}
+
+.index_level {
+    overflow: hidden;
+}
+
+.index_level .index_level_header {
+    background-color: #f4f4f4;
+    border-bottom: 10rpx solid #fff;
+}
+.index_level .index_level_body navigator {
+    width: 33.33%;
+    float: left;
+    border-left: 10rpx solid #fff;
+    border-right: 10rpx solid #fff;
+}
+
+.index_level .index_level_body navigator:nth-last-child(-n+4) {
+    height: 207.97413793rpx;
+}
+
+.index_level .index_level_body navigator:nth-last-child(-n+4) image{
+    height: 100%;
+}
+
+.index_level .index_level_body navigator:nth-last-child(-n+2){
+    margin-top: 25rpx;
 }

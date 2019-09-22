@@ -5,7 +5,19 @@
     </swiper-item>
 </swiper>
 <view class="index_nav">
-    <navigator  wx:for="{{navData}}"wx:key="name">
+    <navigator wx:for="{{navData}}" wx:key="name">
         <image mode="widthFix" src="{{item.image_src}}"></image>
     </navigator>
+</view>
+<view class="index_level" wx:for="{{levelData}}" wx:key="name">
+    <view class="index_level_header">
+        <navigator>
+            <image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+        </navigator>
+    </view>
+    <view class="index_level_body">
+        <navigator wx:for-index="index2" wx:for="{{item.product_list}}" wx:key="name" wx:for-item="item1">
+            <image mode="index2===0?'widthFix':'scaleToFill'" src="{{item1.image_src}}"></image>
+        </navigator>
+    </view>
 </view>

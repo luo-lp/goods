@@ -6,7 +6,9 @@ Page({
    */
   data: {
     // 存放轮播图的数据
-    swiperData:[]
+    swiperData:[],
+    // 存放导航栏数据
+    navData:[]
   },
 
   /**
@@ -20,6 +22,15 @@ Page({
       success(res){
         _this.setData({
           swiperData:res.data.message
+        })
+      }
+    })
+    // 页面加载完毕后获取导航图数据放到navData中
+    wx.request({
+      url:'https://api.zbztb.cn/api/public/v1/home/catitems',
+      success(res){
+        _this.setData({
+          navData:res.data.message
         })
       }
     })

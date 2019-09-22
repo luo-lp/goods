@@ -1,9 +1,10 @@
-swiper{
+.index_swiper{
     height: 340rpx;
 }
-swiper swiper-item{
-    
+.index_nav{
+    display: flex;
 }
-swiper swiper-item image{
-    width: 100%;
+.index_nav navigator{
+    flex:1;
+    padding: 20rpx;
 }

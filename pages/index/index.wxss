@@ -1,1 +1,9 @@
-/* pages/index/index.wxss */
+swiper{
+    height: 340rpx;
+}
+swiper swiper-item{
+    
+}
+swiper swiper-item image{
+    width: 100%;
+}

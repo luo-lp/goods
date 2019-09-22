@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 存放轮播图的数据
+    swiperData:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 页面加载完毕后获取轮播图数据放到swiperData中
+    let _this=this
+    wx.request({
+      url:'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+      success(res){
+        _this.setData({
+          swiperData:res.data.message
+        })
+      }
+    })
   },
 
   /**

@@ -1,1 +1,6 @@
 <Searchinput></Searchinput>
+<swiper indicator-active-color="#ffffff" indicator-dots="true" circular="true" autoplay="true">
+    <swiper-item wx:for="{{swiperData}}" wx:key="item.image_src" wx:for-index="index" wx:for-item="item">
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+    </swiper-item>
+</swiper>

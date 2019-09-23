@@ -1,5 +1,5 @@
 {
-  "usingComponents": {
-    "Searchinput":"../../components/SearchInput/index"
+    "usingComponents": {
+      "Searchinput":"../../components/SearchInput/index"
+    }
   }
-}

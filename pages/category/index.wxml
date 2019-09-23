@@ -1,2 +1,16 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<Searchinput></Searchinput>
+<view class="category">
+  <scroll-view scroll-y class="category_left">
+    <view wx:for="{{cat_name}}" wx:key="*this">{{item}}</view>
+  </scroll-view>
+  <scroll-view scroll-y class="category_right">
+    <view class="category_right_body" wx:for="{{category_right_data}}" wx:key="{{cat_id}}">
+      <view class="category_right_title">{{item.cat_name}}</view>
+      <navigator wx:key="{{cat_id}}" wx:for-item="item1" wx:for="{{item.children}}" class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <image mode="widthFix" src="{{item1.cat_icon}}" />
+          
+        <text>{{item1.cat_name}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>

@@ -27,7 +27,8 @@
 }
 
 .index_level .index_level_body navigator:nth-last-child(-n+4) {
-    height: 207.97413793rpx;
+    /*height: 207.97413793rpx;*/
+    height: 230rpx;
 }
 
 .index_level .index_level_body navigator:nth-last-child(-n+4) image{
@@ -35,5 +36,5 @@
 }
 
 .index_level .index_level_body navigator:nth-last-child(-n+2){
-    margin-top: 25rpx;
+    margin-top: 20rpx;
 }

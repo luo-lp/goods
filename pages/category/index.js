@@ -5,14 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cat_name:[],
+    category_right_data:[]
   },
-
+  getCategoryData() {
+    const _this=this
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/categories',
+      success(res) {
+        _this.setData({
+          cat_name:res.data.message.map(v=>v.cat_name),
+          category_right_data:res.data.message[0].children
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCategoryData()
   },
 
   /**

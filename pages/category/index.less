@@ -1,0 +1,41 @@
+/* pages/category/index.wxss */
+.category {
+  // background-color: red;
+  display: flex;
+
+  .category_left {
+    height: e("calc(100vh - 80rpx)");
+    width: 200rpx;
+  }
+
+  .category_right {
+    flex: 1;
+    // height: ~"calc(100vh - 80rpx)";
+    height: e("calc(100vh - 80rpx)");
+    .category_right_title{
+      // flex: 1;
+      width: 100%;
+      text-align: center;
+    }
+    .category_right_body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      // align-items: center;
+
+      navigator {
+        width: 33.33%;
+        text-align: center;
+        image{
+          width: 60%;
+        }
+        text{
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}
